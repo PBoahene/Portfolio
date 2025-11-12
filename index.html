@@ -1,1 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boahene Prince — Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Production (minified) stylesheet -->
+  <link rel="stylesheet" href="style.min.css">
+  <meta name="description" content="Portfolio of Alex Rivera — Creative Web Developer & Designer" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="logo" href="#">Alex Rivera</a>
+      <nav class="nav" id="navbar">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1>Alex Rivera</h1>
+          <p class="tagline">Creative Web Developer &amp; Designer</p>
+          <p class="hero-lead">I craft elegant, accessible, and performant web experiences focused on clarity and delightful user interactions.</p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn primary" id="ctaProjects">View Projects <i class="fa-solid fa-arrow-down"></i></a>
+            <a href="#contact" class="btn ghost">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-illustration" aria-hidden="true">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container">
+        <h2>About</h2>
+        <p>Hi — I’m Boahene Prince, a web developer and designer passionate about creating digital experiences that are both beautiful and usable. I specialize in building responsive interfaces using HTML, CSS, JavaScript, and React. I enjoy solving design challenges and bringing ideas to life with clean, accessible code.</p>
+        <ul class="skills">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>UI/UX</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="container">
+        <h2>Services</h2>
+        <div class="services-grid">
+          <article class="card service-card">
+            <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Web Development</h3>
+            <p>Modern, responsive web apps with attention to performance and accessibility.</p>
+          </article>
+          <article class="card service-card">
+            <div class="card-icon"><i class="fa-solid fa-pencil-ruler"></i></div>
+            <h3>UI/UX Design</h3>
+            <p>Thoughtful interfaces and prototypes focused on clear user journeys.</p>
+          </article>
+          <article class="card service-card">
+            <div class="card-icon"><i class="fa-solid fa-bullhorn"></i></div>
+            <h3>Branding</h3>
+            <p>Visual identities and cohesive brand systems for digital products.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <p class="muted">Selected works — responsive, polished, and user-focused.</p>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/images/project-1.svg" alt="Portfolio Platform screenshot">
+            </div>
+            <div class="project-info">
+              <h3>Portfolio Platform</h3>
+              <p class="project-desc">A modular portfolio system with an emphasis on speed and content-driven design.</p>
+              <a class="project-link" href="#">View Project</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/images/project-2.svg" alt="E-commerce UI screenshot">
+            </div>
+            <div class="project-info">
+              <h3>E-commerce UI</h3>
+              <p class="project-desc">A clean, conversion-focused store front with adaptive product galleries.</p>
+              <a class="project-link" href="#">View Project</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/images/project-3.svg" alt="Analytics Dashboard screenshot">
+            </div>
+            <div class="project-info">
+              <h3>Analytics Dashboard</h3>
+              <p class="project-desc">Interactive charts and insights for product and growth teams.</p>
+              <a class="project-link" href="#">View Project</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/images/project-4.svg" alt="Marketing Microsite screenshot">
+            </div>
+            <div class="project-info">
+              <h3>Marketing Microsite</h3>
+              <p class="project-desc">A focused landing experience built for conversion and storytelling.</p>
+              <a class="project-link" href="#">View Project</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container contact-grid">
+        <div class="contact-card">
+          <h2>Get in touch</h2>
+          <p>If you'd like to work together or just say hi, send a message — I'll respond within a few days.</p>
+          <form id="contactForm" class="contact-form">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write a short message..." required></textarea>
+
+            <button type="submit" class="btn primary">Send Message</button>
+          </form>
+        </div>
+
+        <aside class="contact-aside">
+          <h3>Connect</h3>
+          <p class="muted">Follow me on social media or send an email.</p>
+          <ul class="social">
+            <li><a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i> GitHub</a></li>
+            <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+            <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Copyright © 2025 Boahene Prince</p>
+      <p class="muted">Built with HTML5, CSS3 &amp; vanilla JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="script.min.js"></script>
+</body>
+</html>
 
