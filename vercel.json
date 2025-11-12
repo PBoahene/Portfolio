@@ -1,0 +1,23 @@
+{
+  "buildCommand": "",
+  "outputDirectory": "./",
+  "installCommand": "npm install",
+  "functions": {
+    "api/sendEmail.js": {
+      "runtime": "nodejs18.x"
+    },
+    "api/sendEmail-smtp.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/(.*\\.(css|js|svg|png|jpg|jpeg|gif|ico|woff|woff2|ttf|eot))",
+      "dest": "/$1"
+    }
+  ]
+}
