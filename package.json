@@ -5,18 +5,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "test:e2e": "npx playwright test",
-    "test:lint": "echo \"No lint configured\"",
-    "test:smtp": "node scripts/send-test-email.js"
+    "preview": "vite preview"
   },
   "dependencies": {
     "nodemailer": "^6.9.4"
   },
   "devDependencies": {
-    "playwright": "^1.40.0",
-    "http-server": "^14.1.1",
-    "dotenv": "^16.3.1",
     "vite": "^5.0.0"
   }
 }
