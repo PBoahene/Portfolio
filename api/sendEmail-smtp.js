@@ -33,13 +33,14 @@ module.exports = async function handler(req, res) {
     await transporter.sendMail({
       from: user,
       to: to,
-      subject: Portfolio message from ,
-      text: Name: \nEmail: \n\n
+      subject: Portfolio Contact: Message from ,
+      text: Name: \nEmail: \n\nMessage:\n,
+      html: <h3>New Portfolio Contact</h3><p><strong>Name:</strong> </p><p><strong>Email:</strong> </p><p><strong>Message:</strong></p><p></p>
     });
 
     return res.status(200).json({ message: 'Message sent successfully!' });
   } catch (err) {
     console.error('SMTP error:', err);
-    return res.status(502).json({ error: 'Unable to send email' });
+    return res.status(502).json({ error: 'Unable to send email', details: err.message });
   }
 };
