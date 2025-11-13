@@ -10,17 +10,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Production (minified) stylesheet -->
   <link rel="stylesheet" href="style.min.css">
-  <meta name="description" content="Portfolio of Alex Rivera — Creative Web Developer & Designer" />
+  <meta name="description" content="Portfolio of Boahene Prince — Web Developer, Designer & Cybersecurity Specialist" />
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-container">
-      <a class="logo" href="#">Alex Rivera</a>
+      <a class="logo" href="#">Boahene Prince</a>
       <nav class="nav" id="navbar">
         <ul class="nav-list">
           <li><a href="#hero" class="nav-link active">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -35,9 +36,9 @@
     <section id="hero" class="hero">
       <div class="container hero-inner">
         <div class="hero-content">
-          <h1>Alex Rivera</h1>
-          <p class="tagline">Creative Web Developer &amp; Designer</p>
-          <p class="hero-lead">I craft elegant, accessible, and performant web experiences focused on clarity and delightful user interactions.</p>
+          <h1>Boahene Prince</h1>
+          <p class="tagline">Web Developer, Designer &amp; Cybersecurity Specialist</p>
+          <p class="hero-lead">I craft elegant, accessible, and performant web experiences while ensuring robust security through networking and penetration testing expertise.</p>
           <div class="hero-cta">
             <a href="#projects" class="btn primary" id="ctaProjects">View Projects <i class="fa-solid fa-arrow-down"></i></a>
             <a href="#contact" class="btn ghost">Contact Me</a>
@@ -53,13 +54,16 @@
     <section id="about" class="section about">
       <div class="container">
         <h2>About</h2>
-        <p>Hi — I’m Boahene Prince, a web developer and designer passionate about creating digital experiences that are both beautiful and usable. I specialize in building responsive interfaces using HTML, CSS, JavaScript, and React. I enjoy solving design challenges and bringing ideas to life with clean, accessible code.</p>
+        <p>Hi — I'm Boahene Prince, a web developer, designer, and cybersecurity specialist passionate about creating digital experiences that are both beautiful and secure. I specialize in building responsive interfaces using HTML, CSS, JavaScript, and React, while also conducting penetration testing and network security assessments to ensure robust protection.</p>
         <ul class="skills">
           <li>HTML</li>
           <li>CSS</li>
           <li>JavaScript</li>
           <li>React</li>
           <li>UI/UX</li>
+          <li>Networking</li>
+          <li>Penetration Testing</li>
+          <li>Cybersecurity</li>
         </ul>
       </div>
     </section>
@@ -82,6 +86,72 @@
             <div class="card-icon"><i class="fa-solid fa-bullhorn"></i></div>
             <h3>Branding</h3>
             <p>Visual identities and cohesive brand systems for digital products.</p>
+          </article>
+          <article class="card service-card">
+            <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <h3>Network Security</h3>
+            <p>Comprehensive network assessments and security architecture planning.</p>
+          </article>
+          <article class="card service-card">
+            <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Penetration Testing</h3>
+            <p>Ethical hacking and vulnerability assessments to strengthen security posture.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section certifications">
+      <div class="container">
+        <h2>Certifications</h2>
+        <p class="muted">Professional credentials and industry-recognized certifications.</p>
+        <div class="certifications-grid">
+          <article class="cert-card">
+            <div class="cert-icon"><i class="fa-solid fa-shield-alt"></i></div>
+            <div class="cert-info">
+              <h3>Cybersecurity Certification</h3>
+              <p class="cert-issuer">Issued by: Security Institute</p>
+              <p class="cert-date">Date: 2024</p>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="cert-link">
+                <i class="fa-brands fa-google-drive"></i> View Certificate
+              </a>
+            </div>
+          </article>
+          
+          <article class="cert-card">
+            <div class="cert-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <div class="cert-info">
+              <h3>Network Security Expert</h3>
+              <p class="cert-issuer">Issued by: Networking Academy</p>
+              <p class="cert-date">Date: 2024</p>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="cert-link">
+                <i class="fa-brands fa-google-drive"></i> View Certificate
+              </a>
+            </div>
+          </article>
+          
+          <article class="cert-card">
+            <div class="cert-icon"><i class="fa-solid fa-bug"></i></div>
+            <div class="cert-info">
+              <h3>Ethical Hacker Certified</h3>
+              <p class="cert-issuer">Issued by: Penetration Testing Corp</p>
+              <p class="cert-date">Date: 2023</p>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="cert-link">
+                <i class="fa-brands fa-google-drive"></i> View Certificate
+              </a>
+            </div>
+          </article>
+          
+          <article class="cert-card">
+            <div class="cert-icon"><i class="fa-solid fa-code"></i></div>
+            <div class="cert-info">
+              <h3>Full Stack Web Developer</h3>
+              <p class="cert-issuer">Issued by: Development Institute</p>
+              <p class="cert-date">Date: 2023</p>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="cert-link">
+                <i class="fa-brands fa-google-drive"></i> View Certificate
+              </a>
+            </div>
           </article>
         </div>
       </div>
@@ -149,7 +219,7 @@
             <input id="name" name="name" type="text" placeholder="Your name" required>
 
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            <input id="email" name="email" type="email" placeholder="you@example.com" r  equired>
 
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" placeholder="Write a short message..." required></textarea>
@@ -162,9 +232,9 @@
           <h3>Connect</h3>
           <p class="muted">Follow me on social media or send an email.</p>
           <ul class="social">
-            <li><a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i> GitHub</a></li>
+            <li><a href="https://github.com/PBoahene" aria-label="GitHub"><i class="fa-brands fa-github"></i> GitHub</a></li>
             <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
-            <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+            <li><a href="#" aria-label="fa-x-phone"><i class="fa-brands fa-x-phone"></i> Phone</a></li>
           </ul>
         </aside>
       </div>

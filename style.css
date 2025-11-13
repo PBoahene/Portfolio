@@ -1,4 +1,4 @@
-/* style.css — development (readable) styles for Alex Rivera portfolio */
+/* style.css — development (readable) styles for Boahene Prince portfolio */
 :root{
   --bg:#0f1720; /* charcoal */
   --card:#111827;
@@ -81,10 +81,22 @@ body{
 .skills li{background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));padding:.4rem .6rem;border-radius:8px;color:var(--muted);font-weight:600}
 
 /* Services */
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:1.5rem}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:1.5rem}
 .service-card{background:var(--card);padding:1.2rem;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6);transition:transform .22s ease, box-shadow .22s ease}
 .service-card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(2,6,23,0.8)}
 .card-icon{width:54px;height:54px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#06a6c2);display:flex;align-items:center;justify-content:center;font-size:1.25rem;color:#002e2f;margin-bottom:.6rem}
+
+/* Certifications */
+.certifications-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem;margin-top:1.5rem}
+.cert-card{background:var(--card);padding:1.5rem;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6);transition:transform .22s ease, box-shadow .22s ease;display:flex;align-items:flex-start;gap:1rem}
+.cert-card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(2,6,23,0.8)}
+.cert-icon{width:54px;height:54px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#06a6c2);display:flex;align-items:center;justify-content:center;font-size:1.25rem;color:#002e2f;flex-shrink:0}
+.cert-info{flex:1}
+.cert-info h3{margin:0 0 0.5rem;font-size:1.1rem}
+.cert-issuer{color:var(--muted);font-size:0.9rem;margin:0.25rem 0}
+.cert-date{color:var(--muted);font-size:0.85rem;margin:0.25rem 0 1rem}
+.cert-link{display:inline-flex;align-items:center;gap:0.5rem;color:var(--accent);text-decoration:none;font-weight:600;font-size:0.9rem;padding:0.5rem 0.75rem;border:1px solid var(--accent);border-radius:6px;transition:all .22s ease}
+.cert-link:hover{background:var(--accent);color:#002e2f}
 
 /* Projects Grid */
 .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-top:1.25rem}
@@ -118,6 +130,7 @@ body{
 
 @media (max-width:800px){
   .services-grid{grid-template-columns:1fr}
+  .certifications-grid{grid-template-columns:1fr}
   .projects-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
   .hero-inner{grid-template-columns:1fr}
