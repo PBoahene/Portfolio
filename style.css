@@ -1,13 +1,27 @@
 /* style.css — development (readable) styles for Boahene Prince portfolio */
 :root{
+  /* Dark theme (default) */
   --bg:#0f1720; /* charcoal */
   --card:#111827;
   --muted:#94a3b8;
   --accent:#06b6d4; /* electric blue / turquoise */
   --glass: rgba(255,255,255,0.02);
+  --text-primary: #e6eef6;
+  --text-secondary: #94a3b8;
   --radius:12px;
   --max-width:1100px;
   --ff: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Light theme */
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --card: #f8fafc;
+  --muted: #64748b;
+  --accent: #0891b2;
+  --glass: rgba(0,0,0,0.02);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
 }
 
 *{box-sizing:border-box}
@@ -16,10 +30,11 @@ body{
   margin:0;
   font-family:var(--ff);
   background:var(--bg);
-  color:#e6eef6;
+  color:var(--text-primary);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   line-height:1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container{
@@ -38,22 +53,48 @@ body{
   border-bottom:1px solid rgba(255,255,255,0.03);
 }
 .nav-container{display:flex;align-items:center;justify-content:space-between}
-.logo{color:#fff;text-decoration:none;font-weight:700;letter-spacing:0.2px}
+.logo{color:var(--text-primary);text-decoration:none;font-weight:700;letter-spacing:0.2px}
 
 .nav{display:block}
 .nav-list{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
 .nav-link{color:var(--muted);text-decoration:none;padding:0.6rem 0.4rem;border-radius:6px;transition:all .18s ease}
-.nav-link:hover{color:#fff;background:var(--glass)}
-.nav-link.active{color:#fff;box-shadow:inset 0 -2px 0 var(--accent)}
+.nav-link:hover{color:var(--text-primary);background:var(--glass)}
+.nav-link.active{color:var(--text-primary);box-shadow:inset 0 -2px 0 var(--accent)}
 
 .nav-toggle{display:none;background:none;border:0;color:inherit}
 .nav-toggle .hamburger{width:24px;height:2px;background:var(--muted);display:block;position:relative}
-.nav-toggle .hamburger::before,.nav-toggle .hamburger::after{content:'';position:absolute;left:0;right:0;height:2px;background:var(--muted);transition:transform .25s ease, top .25s ease, opacity .25s}
+.nav-toggle .hamburger::before,.nav-toggle .hamburger::after{content:'';position:absolute;left:0;right:0;height:2px;background:var(--muted);transition:transform .25s ease,top .25s ease, opacity .25s}
 .nav-toggle .hamburger::before{top:-7px}
 .nav-toggle .hamburger::after{top:7px}
 .nav-toggle.open .hamburger{background:transparent}
 .nav-toggle.open .hamburger::before{transform:rotate(45deg);top:0;background:#fff}
 .nav-toggle.open .hamburger::after{transform:rotate(-45deg);top:0;background:#fff}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: var(--glass);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 0.5rem;
+}
+
+.theme-toggle:hover {
+  background: var(--accent);
+  color: white;
+  transform: scale(1.05);
+}
+
+:root[data-theme="light"] .theme-toggle {
+  border: 1px solid rgba(0,0,0,0.1);
+}
 
 /* Hero */
 .hero{min-height:100vh;display:flex;align-items:center}
@@ -143,6 +184,7 @@ body{
   .nav-toggle{display:block}
   .nav{display:block}
   .nav-link{padding:0.9rem 0.7rem}
+  .theme-toggle{width: 38px; height: 38px; margin-right: 0.75rem;}
 }
 
 /* small helpers */
