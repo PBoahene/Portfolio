@@ -1,6 +1,7 @@
-{
+﻿{
   "name": "boahene-prince-portfolio",
   "version": "1.0.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "vite",
